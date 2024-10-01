@@ -25,9 +25,9 @@ do
                     file1=`dirname ${FILES1[$j]}`/`basename ${FILES1[$j]} .sc`
                     file2=`dirname ${FILES2[$k]}`/`basename ${FILES2[$k]} .sc`
                     echo ============ $j $k
-                    echo python2.7 mains_18.py $file1 $file2 $i 25 10 $d/../matrix/BLOSUM62.txt 12
+                    echo python3.6 mains_18.py $file1 $file2 $i 25 10 $d/../matrix/BLOSUM62.txt 12
                     echo "#############################################################################"
-                    python2.7 mains_18.py $file1 $file2 $i 25 10 $d/../matrix/BLOSUM62.txt 12 | tee inter.temp
+                    python3.6 mains_18.py $file1 $file2 $i 25 10 $d/../matrix/BLOSUM62.txt 12 | tee inter.temp
                     head -4 inter.temp >> $2
                     tail -1 inter.temp >> $2
                 done
